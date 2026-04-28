@@ -1,0 +1,53 @@
+apify:
+  token: ""                          # Set via APIFY_TOKEN environment variable
+  instagram_actor_id: "shu8hvrXbJbY3Eb9W"
+  facebook_actor_id: "KoJrdxJCTtpon81KY"
+  max_posts_per_brand: 100
+
+brands:
+  - name: "Khaadi"
+    instagram_handle: "khaadi"
+    facebook_page: "khaadi"
+  - name: "Gul Ahmed"
+    instagram_handle: "gulahmedofficial"
+    facebook_page: "gulahmedtextile"
+  - name: "Sapphire"
+    instagram_handle: "sapphirepk"
+    facebook_page: "sapphirepk"
+  - name: "Bonanza Satrangi"
+    instagram_handle: "bonanzasatrangi"
+    facebook_page: "bonanzasatrangi"
+  - name: "Nishat Linen"
+    instagram_handle: "nishatlinen"
+    facebook_page: "nishatlinen"
+  - name: "Junaid Jamshed"
+    instagram_handle: "jdotpk"
+    facebook_page: "jdotpk"
+
+campaign_types:
+  - Product Launch
+  - Seasonal Sale
+  - Brand Awareness
+  - Engagement / Contest
+  - Influencer Collaboration
+  - CSR / Social Cause
+
+comment_intents:
+  - Purchase Intent
+  - Complaint
+  - Compliment
+  - Inquiry
+  - Spam
+  - Neutral
+
+database:
+  url: "sqlite:///data/processed/fashion_intelligence.db"
+
+excel:
+  raw_posts_path: "data/raw/posts.xlsx"
+  raw_comments_path: "data/raw/comments.xlsx"
+  output_path: "data/processed/star_schema_export.xlsx"
+
+pipeline:
+  batch_size: 50
+  log_level: "INFO"
